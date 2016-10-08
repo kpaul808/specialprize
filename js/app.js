@@ -1,0 +1,5 @@
+var points;
+
+addPoint(){
+	
+}
