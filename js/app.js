@@ -74,13 +74,14 @@ function change(){
 		document.getElementById("InventoryPics").appendChild(bpen)
 	}else if (points == 1000) {
 		document.getElementById("winbox").innerHTML = "You get a Pen Pineapple Apple Pen";
-		document.getElementById("imagebox").innerHTML = "<img src='pens/ppap.jpg'>"
-		var ppappen = document.createElement("IMG");
+		var ppapvid = document.createElement("iframe");
 		console.log("ppappen")
-		ppappen.setAttribute("src", "pens/ppap.jpg")
-		ppappen.style.width = "100vw";
-		document.getElementById("InventoryPics").appendChild(ppappen)
-		celebrate()
+		var ppapvidsrc = document.createElement("source")
+		ppapvid.appendChild(ppapvidsrc)
+		ppapvid.src = "https://www.youtube.com/embed/JoV3wzO2qLQ?autoplay=1"
+		ppapvid.style.height = "720px"
+		ppapvid.style.width = "1280px"	
+		document.getElementById("imagebox").appendChild(ppapvid)
 	}else{
 		console.log("error :(            JK")
 	}
